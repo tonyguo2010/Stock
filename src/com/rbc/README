@@ -1,0 +1,17 @@
+The stock price Restful demo(SpringBoot version)
+
+The default port is 8080
+
+The available interfaces are:
+1. POST http://localhost:8080/stocks 
+   Post body: the content of dow_jones_index.data, including header.
+   Used for uploading stock data
+   
+2. POST http://localhost:8080/stock
+   Post body: one line of dow_jones_index.data, without header.
+   Used for appending stock data. NOTE: if the data of the same date already existed in the system, the service will not append the input stock info.
+   
+3. GET http://localhost:8080/stock/{stock_id}
+   Used for getting stock info by stock id. 
+   
+   
